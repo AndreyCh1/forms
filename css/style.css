@@ -1,0 +1,301 @@
+body {
+    padding: 78px 0 145px;
+}
+
+.wrapper {
+    margin: auto;
+    max-width: 1000px;
+}
+
+.space_between {
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: 30px;
+    color: #1f222c;
+    font-weight: 700;
+    font-family: "Roboto Slab";
+    text-align: center;
+}
+
+h2 {
+    font-size: 20px;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    color: #b3b3b3;
+    font-weight: 700;
+    font-family: "Roboto";
+}
+
+.wrapper a {
+    font-size: 13px;
+    text-decoration: none;
+    color: #3e6aff;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+
+.simple_form {
+    max-width: 330px;
+}
+
+input,
+select,
+textarea {
+    box-sizing: border-box;
+}
+
+.name {
+    margin-bottom: 10px;
+    padding: 14px 0 14px 17px;
+    width: 100%;
+    border-radius: 3px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.email {
+    margin-bottom: 10px;
+    padding: 14px 0 14px 17px;
+    width: 100%;
+    border-radius: 3px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.location {
+    margin-bottom: 10px;
+    padding: 14px 0 14px 17px;
+    width: 100%;
+    font-size: 14px;
+    color: #1f222c;
+    font-weight: 400;
+    font-family: "Roboto";
+    border-radius: 3px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.email_adress {
+    margin-bottom: 10px;
+    padding: 14px 0 14px 17px;
+    width: 100%;
+    border-radius: 3px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+::placeholder {
+    font-size: 14px;
+    color: #b3b3b3;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+
+.registration_button {
+    padding: 15px 110px;
+    width: 100%;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #12d661;
+    border: none;
+}
+
+.radio + label {
+    position: relative;
+    padding-left: 25px;
+    font-size: 14px;
+    color: #1f222c;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+
+.radio + label:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.radio:checked + label:before {
+    border-color: #3e6aff;
+}
+
+.radio:checked + label:after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 7px;
+    height: 7px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background-color: #3e6aff;
+}
+
+.checkbox + label {
+    position: relative;
+    padding-left: 25px;
+    font-size: 14px;
+    color: #1f222c;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+
+.checkbox + label:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.checkbox:checked + label:before {
+    border-color: #3e6aff;
+}
+
+.checkbox:checked + label:after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 9px;
+    height: 7px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    transform: rotate(-45deg);
+    background-color: #244dd7;
+}
+
+.profile_shape {
+    max-width: 500px;
+}
+
+.profile_shape table td:first-child {
+    width: 160px;
+    font-size: 14px;
+    color: #1f222c;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+
+.profile_shape table td:last-child {
+    border-radius: 3px;
+    background-color: #ffff;
+    border: 1px solid #cccc;
+}
+
+.file_upload_button {
+    padding: 14px 38px;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #3e6aff;
+    font-weight: 700;
+    font-family: "Roboto";
+    text-align: center;
+    border-radius: 3px;
+}
+
+.request {
+    max-width: 680px;
+}
+
+.request table th {
+    font-size: 13px;
+    color: #b3b3b3;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+
+.request table td input {
+    border-radius: 3px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.box {
+    padding: 0 25px;
+    width: 310px;
+    height: 282px;
+    filter: drop-shadow(0px 5px 6px rgba(0,0,0,0.15));
+    background-color: #fafafa;
+    border: 1px solid #e6e6e6;
+}
+
+.box p {
+    font-size: 13px;
+    color: #b3b3b3;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+
+.box input {
+    border-radius: 3px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+}
+
+.login_button {
+    padding: 15px 110px;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #12d661;
+    border: none;
+}
+
+.radio,
+.checkbox {
+    display: none;
+}
+
+.box2 {
+    width: 473px;
+    height: 114px;
+    border-radius: 3px;
+    background-color: #f7f7f7;
+    border: 1px solid #e5e5e5;
+}
+
+.previous_page_button {
+    padding: 15px 27px;
+    margin-right: 320px;
+    font-size: 14px;
+    color: #6e6f77;
+    font-weight: 700;
+    font-family: "Roboto";
+    text-align: center;
+    border-radius: 3px;
+    background-color: #ffffff;
+    border: 1px solid #85868d;
+}
+
+.buy_button {
+    padding: 15px 27px;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Roboto";
+    text-align: center;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #12d661;
+    border: none;
+}
