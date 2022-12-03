@@ -38,7 +38,7 @@ h2 {
 }
 
 hr {
-    margin: 50px 0;
+    margin: 40px 0;
     border: none;
     border-top: 1px solid #dcdcde;
 }
@@ -72,6 +72,11 @@ a:hover {
     max-width: 330px;
 }
 
+.mb10 {
+    display: block;
+    margin-bottom: 10px;
+}
+
 input,
 select,
 textarea {
@@ -79,7 +84,6 @@ textarea {
 }
 
 .text_field {
-    margin-bottom: 10px;
     padding: 11px 17px;
     width: 100%;
     font-size: 14px;
@@ -91,7 +95,8 @@ textarea {
     border: 1px solid #ccc;
 }
 
-.text_field:focus {
+.text_field:focus,
+.date:focus {
     outline: none;
     filter: drop-shadow(0 0 2.5px rgba(62,106,255,0.55));
     border-color: #3e6aff;
@@ -104,24 +109,32 @@ textarea {
 }
 
 .list {
+    display: block;
     position: relative;
+    background-color: #fff;
+    border-radius: 3px;
 }
 
 .list select {
+    position: relative;
     appearance: none;
     -webkit-appearance: none;
+    background-color: transparent;
+    z-index: 1;
 }
 
 .list:before {
     content: '';
     position: absolute;
-    top: 7px;
+    top: 18px;
     right: 14px;
     border: 5px solid transparent;
     border-top-color: #1f222c;
+    z-index: 0;
 }
 
 .textarea {
+    min-height: 42px;
     resize: vertical;
 }
 
@@ -194,6 +207,7 @@ textarea {
 .checkbox + label {
     position: relative;
     padding: 0 25px;
+    padding-right: 0;
     font-size: 14px;
     color: #1f222c;
     font-weight: 400;
@@ -243,6 +257,7 @@ textarea {
 
 .box2 {
     padding: 20px;
+    width: 474px;
     max-width: 473px;
     border-radius: 3px;
     background-color: #f7f7f7;
@@ -250,6 +265,7 @@ textarea {
 }
 
 .box2 td:first-child {
+    width: 78px;
     font-size: 14px;
     color: #b3b3b3;
     font-weight: 700;
@@ -259,11 +275,15 @@ textarea {
     padding: 11px 17px;
     font-size: 14px;
     font-weight: 400;
-    font-family: Roboto;
+    font-family: "Roboto";
     color: #1f222c;
+    background: #fff url(../images/date_calendar.png) no-repeat right 13px center;
     border-radius: 3px;
-    background-color: #fff;
     border: 1px solid #ccc;
+}
+
+.date::-webkit-calendar-picker-indicator {
+    opacity: 0;
 }
 
 .w50p {
@@ -343,6 +363,7 @@ textarea {
     height: 20px;
     border-radius: 11px;
     background-color: #ffffff;
+    transition: all 0.5s ease;
 }
 
 .toggle:checked + label:before {
@@ -365,8 +386,13 @@ textarea {
     max-width: 500px;
 }
 
+.profile_shape label {
+    margin: 0;
+}
+
 .profile_shape table td:first-child {
     width: 160px;
+    padding: 20px 0;
     font-size: 14px;
     color: #1f222c;
     font-weight: 400;
@@ -384,6 +410,10 @@ textarea {
 
 .file_upload_button {
     visibility: hidden;
+}
+
+.file_upload_button + label {
+    display: inline-block;
     padding: 14px 38px;
     font-size: 14px;
     color: #ffffff;
@@ -401,9 +431,12 @@ textarea {
     max-width: 680px;
 }
 
+.table_margin {
+    margin: 0 -4px;
+}
+
 .request table {
     width: 100%;
-    margin-left: -4px;
 }
 
 .request table td {
@@ -437,7 +470,6 @@ textarea {
 }
 
 .previous_page_button:hover {
-    font-family: Roboto;
     color: #fff;
     background-color: #85868d;
     cursor: pointer;
@@ -462,6 +494,10 @@ textarea {
     cursor: pointer;
 }
 
+.request hr {
+    margin: 20px 0;
+}
+
 .fixed {
     position: absolute;
     top: 144px;
@@ -482,10 +518,12 @@ textarea {
 
 .close_button + label {
     position: absolute;
-    top: 10px;
+    top: 70px;
     right: 10px;
     width: 10px;
     height: 10px;
+    z-index: 2;
+    cursor: pointer;
 }
 
 .close_button + label:before {
@@ -508,7 +546,14 @@ textarea {
     background-color: #b3b3b3
 }
 
-.close_button:checked .close_button_label {
+.close_button + label:hover:before,
+.close_button + label:hover:after {
+    background-color: #949494;
+}
+
+.close_button:checked ~ .substrate,
+.close_button:checked ~ h2,
+.close_button:checked + label {
     display: none;
 }
 
