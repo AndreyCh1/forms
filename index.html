@@ -33,7 +33,7 @@
         </form>
         <hr>
         <h2>02. елементи</h2>
-        <form class="space_between elements" action="">
+        <form class="space_between elements" action="php/form.php">
             <div>
                 <p><input class="radio" id="deliverynew" type="radio" name="delivery_method" value=""><label
                         for="deliverynew">НоваПошта</label></p>
@@ -76,7 +76,7 @@
         </form>
         <hr>
         <h2>03. стилізовані чекбокси</h2>
-        <form class="space_between" action="">
+        <form class="space_between" action="php/form.php">
             <div class="w50p">
                 <input class="he" id="man" name="sex" type="radio" value=""><label for="man">Чоловік</label><br>
                 <input class="she" id="woman" name="sex" type="radio" value=""><label for="woman">Жінка</label>
@@ -96,7 +96,7 @@
         <hr>
         <h2>04. форма таблицею</h2>
         <h3>Заповніть усі необхідні поля</h3>
-        <form class="profile_shape" action="">
+        <form class="profile_shape" action="php/form.php">
             <table>
                 <tbody>
                     <tr>
@@ -110,9 +110,9 @@
                                 placeholder="Введіть не менше 6 символів" value=""></td>
                     </tr>
                     <tr>
-                        <td><label class="list mb10" for="list">Місто:</label></td>
+                        <td><label class="list profile_shape_list mb10" for="profileshapelist">Місто:</label></td>
                         <td>
-                            <select class="text_field select" name="city" id="list" value="">
+                            <select class="text_field select" name="city" id="profileshapelist" value="">
                                 <option value="">Хмельницький</option>
                                 <option value="">Київ</option>
                                 <option value="">Одеса</option>
@@ -147,7 +147,7 @@
             </table>
         </form>
         <hr>
-        <form class="request" action="">
+        <form class="request" action="php/form.php">
             <h2>05. форма таблицею</h2>
             <h3>Оформлення заявки</h3>
             <div class="table_margin">
@@ -171,30 +171,26 @@
                 <table>
                     <tbody>
                         <tr>
-                            <td>Країна</td>
-                            <td colspan="2">Адреса</td>
+                            <td><label class="list request_list mb10" for="list">Країна</label></td>
+                            <td colspan="2"><label class="mb10" for="address">Адреса</label></td>
                         </tr>
                         <tr>
                             <td>
-                                <label class="list mb10" for="list">
-                                    <select class="text_field" name="city" id="list" value="">
-                                        <option value="">Індонезія</option>
-                                    </select>
-                                </label>
+                                <select class="text_field" name="city" id="list" value="">
+                                    <option value="">Індонезія</option>
+                                </select>
                             </td>
-                            <td colspan="2"><label class="mb10"><input class="text_field" type="text" name=""
-                                        value=""></label></td>
+                            <td colspan="2"><input class="text_field" type="text" name="" id="address" value=""></td>
                         </tr>
                         <tr>
-                            <td>Місто</td>
-                            <td>Будинок</td>
-                            <td>Поштовий індекс</td>
+                            <td><label class="mb10" for="city">Місто</label></td>
+                            <td><label class="mb10" for="housenumber">Будинок</label></td>
+                            <td><label class="mb10" for="postcode">Поштовий індекс</label></td>
                         </tr>
                         <tr>
-                            <td><label class="mb10"><input class="text_field" type="text" name="" value=""></label></td>
-                            <td><label class="mb10"><input class="text_field" type="text" name="" value=""></label></td>
-                            <td><label class="mb10"><input class="text_field" type="number" name="" value=""></label>
-                            </td>
+                            <td><input class="text_field" type="text" name="" id="city" value=""></td>
+                            <td><input class="text_field" type="text" name="" id="housenumber" value=""></td>
+                            <td><input class="text_field" type="number" name="" id="postcode" value=""></td>
                         </tr>
                     </tbody>
                 </table>
@@ -216,10 +212,10 @@
             <h2>06. фіксована форма</h2>
             <div class="substrate">
                 <div class="box">
-                    <p>Логін</p>
-                    <label><input class="text_field text_field_small" type="text" name="" value=""></label><br>
-                    <p>Пароль</p>
-                    <label><input class="text_field text_field_small" type="password" name="" value=""></label><br>
+                    <p><label for="login">Логін</label></p>
+                    <input class="text_field text_field_small" type="text" name="" id="login" value=""><br>
+                    <p><label for="fixedformpassword">Пароль</label></p>
+                    <input class="text_field text_field_small" type="password" name="" id="fixedformpassword" value=""><br>
                     <p><a href="#">Забули пароль?</a></p>
                     <p><input class="checkbox" id="rememberpassword" type="checkbox" name="" value=""><label
                             for="rememberpassword">Запам’ятати пароль</label></p>

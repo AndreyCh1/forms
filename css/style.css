@@ -115,7 +115,9 @@ textarea {
     border-radius: 3px;
 }
 
-.list select {
+.list select,
+.profile_shape select,
+.request select {
     position: relative;
     appearance: none;
     -webkit-appearance: none;
@@ -404,8 +406,13 @@ textarea {
 }
 
 .profile_shape table tr:last-child td:first-child {
-    padding: 17px 0;
+    padding: 12px 0;
     vertical-align: top;
+}
+
+.profile_shape_list:before {
+    top: 6px;
+    right: -323px;
 }
 
 .file_upload_button {
@@ -455,6 +462,11 @@ textarea {
     border-radius: 3px;
     background-color: #fff;
     border: 1px solid #ccc;
+}
+
+.request_list:before {
+    top: 47px;
+    right: 14px;
 }
 
 .previous_page_button {
