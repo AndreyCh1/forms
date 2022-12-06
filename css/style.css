@@ -98,7 +98,7 @@ textarea {
 .text_field:focus,
 .date:focus {
     outline: none;
-    filter: drop-shadow(0 0 2.5px rgba(62,106,255,0.55));
+    box-shadow: 0 0 2.5px rgba(62,106,255,0.55);
     border-color: #3e6aff;
 }
 
@@ -116,8 +116,8 @@ textarea {
 }
 
 .list select,
-.profile_shape select,
-.request select {
+.request select,
+.file_upload_button {
     position: relative;
     appearance: none;
     -webkit-appearance: none;
@@ -155,10 +155,6 @@ textarea {
     filter: drop-shadow(0px 2px 2.5px rgba(8,118,52,0.35));
     background-color: #07be51;
     cursor: pointer;
-}
-
-.elements p {
-    
 }
 
 .radio,
@@ -388,40 +384,37 @@ textarea {
     max-width: 500px;
 }
 
-.profile_shape label {
-    margin: 0;
+.profile_shape table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
 .profile_shape table td:first-child {
     width: 160px;
-    padding: 20px 0;
+    padding: 17px 0;
     font-size: 14px;
     color: #1f222c;
     font-weight: 400;
 }
 
 .profile_shape table td:last-child {
+    padding: 7px 0;
     border-radius: 3px;
     background-color: #ffff;
 }
 
-.profile_shape table tr:last-child td:first-child {
-    padding: 12px 0;
+.profile_shape td:first-child {
     vertical-align: top;
 }
 
-.profile_shape_list:before {
-    top: 6px;
-    right: -323px;
-}
-
 .file_upload_button {
-    visibility: hidden;
+    display: none;
+    /* visibility: hidden; */
 }
 
 .file_upload_button + label {
     display: inline-block;
-    padding: 14px 38px;
+    padding: 13px 38px;
     font-size: 14px;
     color: #ffffff;
     background-color: #3e6aff;
@@ -430,8 +423,9 @@ textarea {
     border-radius: 3px;
 }
 
-.profile_shape table tr:last-child td:first-child {
-    
+.file_upload_button + label:hover {
+    filter: drop-shadow(0px 2px 2.5px rgba(15,40,126,0.35));
+    background-color: #2857f4;
 }
 
 .request {
@@ -447,7 +441,7 @@ textarea {
 }
 
 .request table td {
-    padding: 0 4px;
+    padding: 4px 4px;
     width: 33.3%;
 }
 
@@ -467,6 +461,10 @@ textarea {
 .request_list:before {
     top: 47px;
     right: 14px;
+}
+
+tr.padding_bottom_td td {
+    padding-bottom: 13px;
 }
 
 .previous_page_button {
@@ -506,8 +504,12 @@ textarea {
     cursor: pointer;
 }
 
-.request hr {
-    margin: 20px 0;
+hr.top_hr {
+    margin: 25px 0 20px;
+}
+
+hr.bottom_hr {
+    margin: 25px 0 30px;
 }
 
 .fixed {

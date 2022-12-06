@@ -33,7 +33,7 @@
         </form>
         <hr>
         <h2>02. елементи</h2>
-        <form class="space_between elements" action="php/form.php">
+        <form class="space_between elements" action="php/form.php" method="post">
             <div>
                 <p><input class="radio" id="deliverynew" type="radio" name="delivery_method" value=""><label
                         for="deliverynew">НоваПошта</label></p>
@@ -76,7 +76,7 @@
         </form>
         <hr>
         <h2>03. стилізовані чекбокси</h2>
-        <form class="space_between" action="php/form.php">
+        <form class="space_between" action="php/form.php" method="post">
             <div class="w50p">
                 <input class="he" id="man" name="sex" type="radio" value=""><label for="man">Чоловік</label><br>
                 <input class="she" id="woman" name="sex" type="radio" value=""><label for="woman">Жінка</label>
@@ -96,33 +96,35 @@
         <hr>
         <h2>04. форма таблицею</h2>
         <h3>Заповніть усі необхідні поля</h3>
-        <form class="profile_shape" action="php/form.php">
+        <form class="profile_shape" action="php/form.php" method="post">
             <table>
                 <tbody>
                     <tr>
-                        <td><label class="mb10" for="inithials">ФІО:</label></td>
+                        <td><label for="inithials">ФІО:</label></td>
                         <td><input class="text_field" type="text" name="" id="inithials" placeholder="Введіть ім’я"
                                 value=""></td>
                     </tr>
                     <tr>
-                        <td><label class="mb10" for="password">Пароль:</label></td>
+                        <td><label for="password">Пароль:</label></td>
                         <td><input class="text_field" type="password" name="" id="password"
                                 placeholder="Введіть не менше 6 символів" value=""></td>
                     </tr>
                     <tr>
-                        <td><label class="list profile_shape_list mb10" for="profileshapelist">Місто:</label></td>
+                        <td><label for="profileshapelist">Місто:</label></td>
                         <td>
-                            <select class="text_field select" name="city" id="profileshapelist" value="">
-                                <option value="">Хмельницький</option>
-                                <option value="">Київ</option>
-                                <option value="">Одеса</option>
-                                <option value="">Миколаїв</option>
-                                <option value="">Рівно</option>
-                            </select>
+                            <label class="list">
+                                <select class="text_field" name="city" id="profileshapelist" value="">
+                                    <option value="">Хмельницький</option>
+                                    <option value="">Київ</option>
+                                    <option value="">Одеса</option>
+                                    <option value="">Миколаїв</option>
+                                    <option value="">Рівно</option>
+                                </select>
+                            </label>
                         </td>
                     </tr>
                     <tr>
-                        <td>Стать:</td>
+                        <td><label for="male">Стать:</label></td>
                         <td>
                             <input class="radio" id="male" type="radio" name="gender" value=""><label
                                 for="male">Чоловік</label>
@@ -131,32 +133,36 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>Фото:</td>
+                        <td><label for="file">Фото:</label></td>
                         <td><input class="file_upload_button" type="file" name="" id="file" value=""><label
                                 for="file">Виберіть файл</label></td>
                     </tr>
                     <tr>
-                        <td><label class="mb10" for="comment">Коментарій:</label></td>
+                        <td><label for="comment">Коментарій:</label></td>
                         <td>
                             <textarea class="text_field textarea" name="" id="comment" cols="30" rows="10"
                                 placeholder="Введіть текст повідомлення" value=""></textarea>
-                            <input class="registration_button" type="submit" value="Зареєструватися">
+                            
                         </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td><input class="registration_button" type="submit" value="Зареєструватися"></td>
                     </tr>
                 </tbody>
             </table>
         </form>
         <hr>
-        <form class="request" action="php/form.php">
+        <form class="request" action="php/form.php" method="post">
             <h2>05. форма таблицею</h2>
             <h3>Оформлення заявки</h3>
             <div class="table_margin">
                 <table>
                     <tbody>
                         <tr>
-                            <td><label class="mb10" for="lastandfirstname">Прізвище та ім’я</label></td>
-                            <td><label class="mb10" for="email">Ел. пошта</label></td>
-                            <td><label class="mb10" for="telnumber">Телефон</label></td>
+                            <td><label for="lastandfirstname">Прізвище та ім’я</label></td>
+                            <td><label for="email">Ел. пошта</label></td>
+                            <td><label for="telnumber">Телефон</label></td>
                         </tr>
                         <tr>
                             <td><input class="text_field" type="text" name="" id="lastandfirstname" value=""></td>
@@ -166,26 +172,28 @@
                     </tbody>
                 </table>
             </div>
-            <hr>
+            <hr class="top_hr">
             <div class="table_margin">
                 <table>
                     <tbody>
                         <tr>
-                            <td><label class="list request_list mb10" for="list">Країна</label></td>
-                            <td colspan="2"><label class="mb10" for="address">Адреса</label></td>
+                            <td><label for="list">Країна</label></td>
+                            <td colspan="2"><label for="address">Адреса</label></td>
                         </tr>
-                        <tr>
+                        <tr class="padding_bottom_td">
                             <td>
-                                <select class="text_field" name="city" id="list" value="">
-                                    <option value="">Індонезія</option>
-                                </select>
+                                <label class="list">
+                                    <select class="text_field" name="city" id="list" value="">
+                                        <option value="">Індонезія</option>
+                                    </select>
+                                </label>
                             </td>
                             <td colspan="2"><input class="text_field" type="text" name="" id="address" value=""></td>
                         </tr>
                         <tr>
-                            <td><label class="mb10" for="city">Місто</label></td>
-                            <td><label class="mb10" for="housenumber">Будинок</label></td>
-                            <td><label class="mb10" for="postcode">Поштовий індекс</label></td>
+                            <td><label for="city">Місто</label></td>
+                            <td><label for="housenumber">Будинок</label></td>
+                            <td><label for="postcode">Поштовий індекс</label></td>
                         </tr>
                         <tr>
                             <td><input class="text_field" type="text" name="" id="city" value=""></td>
@@ -200,7 +208,7 @@
                     правилами оплати та
                     доставки товару</label>
             </p>
-            <hr>
+            <hr class="bottom_hr">
             <div class="space_between">
                 <button class="previous_page_button">Повернутися назад</button>
                 <input class="buy_button" type="submit" name="" value="Оформити покупку">
