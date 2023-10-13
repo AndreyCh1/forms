@@ -17,11 +17,14 @@
 }
 
 body {
-    padding: 78px 0 145px;
+    margin: 0;
+    padding: 72px 0 145px;
     font-family: 'Roboto', Arial, sans-serif;
 }
 
 h1 {
+    margin-top: 0;
+    margin-bottom: 65px;
     font-size: 30px;
     color: #1f222c;
     font-weight: 700;
@@ -242,13 +245,13 @@ textarea {
     border-right: none;
 }
 
-.disabled_radio + label,
-.disabled_checkbox + label {
+.radio:disabled + label,
+.checkbox:disabled + label {
     color: #b3b3b3;
 }
 
-.disabled_radio + label:before,
-.disabled_checkbox + label:before {
+.radio:disabled + label:before,
+.checkbox:disabled + label:before {
     background-color: #f7f7f7;
     border: 1px solid #e5e5e5;
 }
@@ -513,9 +516,14 @@ hr.bottom_hr {
 }
 
 .fixed {
-    position: absolute;
-    top: 144px;
+    position: fixed;
+    top: calc(50vh - 40px);
     right: 262px;
+    transform: translateY(-50%);
+}
+
+.fixed h2 {
+    margin-top: 0;
 }
 
 .substrate {
@@ -532,7 +540,7 @@ hr.bottom_hr {
 
 .close_button + label {
     position: absolute;
-    top: 70px;
+    top: 53px;
     right: 10px;
     width: 10px;
     height: 10px;
@@ -593,7 +601,7 @@ hr.bottom_hr {
 
 .login_button {
     width: 100%;
-    padding: 15px 110px;
+    padding: 14px 30px;
     border-radius: 3px;
     color: #fff;
     background-color: #12d661;
